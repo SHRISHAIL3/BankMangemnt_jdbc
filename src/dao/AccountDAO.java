@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public class AccountDAO {
 
-    // Create new account
+    // Create new account for new users
     public void createAccount(Account account) {
         String sql = "INSERT INTO accounts(name, phone, password, balance) VALUES (?, ?, ?, ?)";
         try (Connection conn = DBConnection.getConnection();
