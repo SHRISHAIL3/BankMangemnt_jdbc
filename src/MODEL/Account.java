@@ -8,7 +8,7 @@ public class Account {
     private double balance;
 
     public Account() {}
-
+//construcotr
     public Account(int id, String name, String phone, String password, double balance) {
         this.id = id;
         this.name = name;
