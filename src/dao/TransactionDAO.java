@@ -8,7 +8,7 @@ import java.util.List;
 
 public class TransactionDAO {
 
-    // Record a transaction
+    // Record a transactions
     public void recordTransaction(Transaction txn) {
         String sql = "INSERT INTO transactions(accountId, amount, date, type) VALUES(?, ?, ?, ?)";
         try (Connection conn = DBConnection.getConnection();
