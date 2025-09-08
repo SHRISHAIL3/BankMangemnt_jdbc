@@ -70,7 +70,7 @@ public class Main {
                     System.out.println("Logging out...");
                     return;
                 default:
-                    System.out.println("Invalid choice. Try again.");
+                    System.out.println("Invalid choice . Try again.");
             }
         }
     }
