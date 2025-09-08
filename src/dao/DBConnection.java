@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.util.Properties;
 import java.io.InputStream;
 
+//connection
 public class DBConnection {
     private static Connection connection = null;
 
