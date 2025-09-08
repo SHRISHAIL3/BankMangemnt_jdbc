@@ -17,9 +17,9 @@ public class TransactionService {
         List<Transaction> transactions = transactionDAO.getTransactionsByAccount(accountId);
 
         if (transactions.isEmpty()) {
-            System.out.println("❌ No transactions found for account ID: " + accountId);
+            System.out.println(" No transactions found for account ID: " + accountId);
         } else {
-            System.out.println("\n📜 Transaction History for Account ID: " + accountId);
+            System.out.println("Transaction History for Account ID: " + accountId);
             for (Transaction txn : transactions) {
                 System.out.println(txn);
             }
