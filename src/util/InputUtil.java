@@ -8,7 +8,7 @@ public class InputUtil {
     public static int getInt(String prompt) {
         System.out.print(prompt);
         while (!scanner.hasNextInt()) {
-            System.out.println("❌ Invalid input. Please enter a number.");
+            System.out.println(" Invalid input. Please enter a number.");
             scanner.next(); // clear invalid input
             System.out.print(prompt);
         }
@@ -18,7 +18,7 @@ public class InputUtil {
     public static double getDouble(String prompt) {
         System.out.print(prompt);
         while (!scanner.hasNextDouble()) {
-            System.out.println("❌ Invalid input. Please enter a number.");
+            System.out.println(" Invalid input. Please enter a number.");
             scanner.next(); // clear invalid input
             System.out.print(prompt);
         }
