@@ -22,17 +22,17 @@ public class AccountService {
         Optional<Account> account = accountDAO.login(phone, password);
         if (account.isPresent()) {
             loggedInUser = account.get();
-            System.out.println("✅ Login successful. Welcome " + loggedInUser.getName());
+            System.out.println(" Login successful. Welcome " + loggedInUser.getName());
             return true;
         } else {
-            System.out.println("❌ Invalid phone or password");
+            System.out.println(" Invalid phone or password");
             return false;
         }
     }
 
     public void deposit(double amount) {
         if (loggedInUser == null) {
-            System.out.println("⚠️ Please login first!");
+            System.out.println(" Please login first!");
             return;
         }
         double newBalance = loggedInUser.getBalance() + amount;
@@ -46,12 +46,12 @@ public class AccountService {
         	        "DEPOSIT"
         	    )
         	);
-        System.out.println("✅ Deposit successful. New Balance: " + newBalance);
+        System.out.println("Deposit successful. New Balance: " + newBalance);
     }
 
     public void withdraw(double amount) {
         if (loggedInUser == null) {
-            System.out.println("⚠️ Please login first!");
+            System.out.println(" Please login first!");
             return;
         }
         if (loggedInUser.getBalance() >= amount) {
@@ -70,13 +70,13 @@ public class AccountService {
 
             System.out.println(" Withdrawal successful. New Balance: " + newBalance);
         } else {
-            System.out.println("❌ Insufficient balance!");
+            System.out.println(" Insufficient balance!");
         }
     }
 
     public void checkBalance() {
         if (loggedInUser == null) {
-            System.out.println("⚠️ Please login first!");
+            System.out.println(" Please login first!");
             return;
         }
         System.out.println("Balance: " + loggedInUser.getBalance());
@@ -84,7 +84,7 @@ public class AccountService {
 
     public void viewTransactions() {
         if (loggedInUser == null) {
-            System.out.println("⚠️ Please login first!");
+            System.out.println(" Please login first!");
             return;
         }
         transactionDAO.getTransactionsByAccount(loggedInUser.getId())
